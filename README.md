@@ -1,6 +1,8 @@
 # my-bash-it
 
-**my-bash-it** is a clone of my-bash-it with all the content stripped out. It is meant to allow me to maintain all my aliases etc. in my-bash-it's well-originanized structure to sit alongside my-bash-it.
+**my-bash-it** is a clone of bash-it with all the content stripped out. It is meant to allow someone (me) to maintain all my aliases etc. in my-bash-it's well-originanized structure to sit alongside bash-it and mantain it in a repo.
+
+The 'empty' branch contains the skeleton of the project. That will allow anyone to do what I've done.
 
 ## Install
 
