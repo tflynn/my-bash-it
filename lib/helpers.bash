@@ -138,13 +138,13 @@ _my-bash-it_update() {
   if [[ -n "${status}" ]]; then
     git pull --rebase &> /dev/null
     if [[ $? -eq 0 ]]; then
-      echo "Bash-it successfully updated, enjoy!"
+      echo "my-bash-it successfully updated, enjoy!"
       reload
     else
-      echo "Error updating Bash-it, please, check if your Bash-it installation folder (${MY_BASH_IT}) is clean."
+      echo "Error updating my-bash-it, please, check if your Bash-it installation folder (${MY_BASH_IT}) is clean."
     fi
   else
-    echo "Bash-it is up to date, nothing to do!"
+    echo "my-bash-it is up to date, nothing to do!"
   fi
   cd - &> /dev/null
 }
