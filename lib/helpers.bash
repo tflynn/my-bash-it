@@ -103,7 +103,7 @@ _my-bash-it-aliases ()
     _about 'summarizes available bash_it aliases'
     _group 'lib'
 
-    _bash-it-describe "aliases" "an" "alias" "Alias"
+    _my-bash-it-describe "aliases" "an" "alias" "Alias"
 }
 
 _my-bash-it-completions ()
@@ -111,12 +111,11 @@ _my-bash-it-completions ()
     _about 'summarizes available bash_it completions'
     _group 'lib'
 
-    _bash-it-describe "completion" "a" "completion" "Completion"
+   _my-bash-it-describe "completion" "a" "completion" "Completion"
 }
 
 _my-bash-it-plugins ()
 {
-    echo "DEBUG _my-bash-it-plugins"
     _about 'summarizes available bash_it plugins'
     _group 'lib'
 
