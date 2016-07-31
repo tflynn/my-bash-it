@@ -31,7 +31,6 @@ function my_reload_plugins() {
 
 my-bash-it ()
 {
-    echo "DEBUG verb ${1} component $2 func $3"
     about 'my-bash-it help and maintenance'
     param '1: verb [one of: help | show | enable | disable | update | search ] '
     param '2: component type [one of: alias(es) | completion(s) | plugin(s) ] or search term(s)'
@@ -49,7 +48,6 @@ my-bash-it ()
     typeset func
     case $verb in
          show)
-             echo "DEBUG show _my-bash-it-$component"
              func=_my-bash-it-$component;;
          enable)
              func=_my-enable-$component;;
@@ -118,7 +116,6 @@ _my-bash-it-completions ()
 
 _my-bash-it-plugins ()
 {
-    echo "DEBUG _my-bash-it-plugins"
     _about 'summarizes available bash_it plugins'
     _group 'lib'
 
