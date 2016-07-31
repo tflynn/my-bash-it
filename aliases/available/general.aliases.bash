@@ -52,6 +52,8 @@ fps(){
 	ps ${PS_OPTIONS} | grep -v grep | grep -i $1
 }
 
+alias rmr="rm -rf"
+
 
 sha256file() {
   if [ "X$1" == "X" ]; then
