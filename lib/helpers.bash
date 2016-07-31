@@ -31,6 +31,7 @@ function my_reload_plugins() {
 
 my-bash-it ()
 {
+    echo "DEBUG verb ${1} component $2 func $3"
     about 'my-bash-it help and maintenance'
     param '1: verb [one of: help | show | enable | disable | update | search ] '
     param '2: component type [one of: alias(es) | completion(s) | plugin(s) ] or search term(s)'
@@ -48,6 +49,7 @@ my-bash-it ()
     typeset func
     case $verb in
          show)
+             echo "DEBUG show _my-bash-it-$component"
              func=_my-bash-it-$component;;
          enable)
              func=_my-enable-$component;;
@@ -103,7 +105,7 @@ _my-bash-it-aliases ()
     _about 'summarizes available bash_it aliases'
     _group 'lib'
 
-    _bash-it-describe "aliases" "an" "alias" "Alias"
+    _my-bash-it-describe "aliases" "an" "alias" "Alias"
 }
 
 _my-bash-it-completions ()
@@ -111,7 +113,7 @@ _my-bash-it-completions ()
     _about 'summarizes available bash_it completions'
     _group 'lib'
 
-    _bash-it-describe "completion" "a" "completion" "Completion"
+   _my-bash-it-describe "completion" "a" "completion" "Completion"
 }
 
 _my-bash-it-plugins ()
