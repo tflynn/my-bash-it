@@ -248,17 +248,17 @@ _my-disable-thing ()
 
 _my-enable-plugin ()
 {
-    _about 'enables bash_it plugin'
+    _about 'enables my-bash-it plugin'
     _param '1: plugin name'
     _example '$ enable-plugin rvm'
     _group 'lib'
 
-    _enable-thing "plugins" "plugin" $1
+    _my-enable-thing "plugins" "plugin" $1
 }
 
 _my-enable-alias ()
 {
-    _about 'enables bash_it alias'
+    _about 'enables my-bash-it alias'
     _param '1: alias name'
     _example '$ enable-alias git'
     _group 'lib'
@@ -268,7 +268,7 @@ _my-enable-alias ()
 
 _my-enable-completion ()
 {
-    _about 'enables bash_it completion'
+    _about 'enables my-bash-it completion'
     _param '1: completion name'
     _example '$ enable-completion git'
     _group 'lib'
