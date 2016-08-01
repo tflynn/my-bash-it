@@ -14,6 +14,6 @@ case $OSTYPE in
         fi
 
     }
-    alias tb="mate ~/.bash_ext ~/.bash_ext_local ~/.bash_local ~/.bashrc ~/.bash_profile"
+    alias tb="mate ~/.bash_local ~/.bashrc ~/.bash_profile"
     ;;
 esac
