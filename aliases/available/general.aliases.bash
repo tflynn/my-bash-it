@@ -28,3 +28,6 @@ alias p="echo \$PATH"
 
 alias rmr="rm -rf"
 
+alias lh="ls -lh"
+
+
