@@ -3,14 +3,14 @@ about-alias 'general aliases'
 
 shopt -s expand_aliases
 
-export HISTFILESIZE=10000
+export HISTFILESIZE=100000
 export HISTSIZE=10000
 
 # Append ~/bin to search path
 export PATH=${PATH}:~/bin
 
 alias g="grep"
-alias gi="grep -i"
+alias gi="grep -iH"
 
 # export GREP_OPTIONS="--color=never"
 #
@@ -18,11 +18,11 @@ alias gi="grep -i"
 # alias gi="grep -i"
 
 alias a=alias
-alias ag="alias | gi"
+alias ag="alias | grep -i"
 
 alias h=history
-alias gh="h | gi"
-alias hf="h | gi"
+alias gh="h | grep -i"
+alias hf="h | grep -i"
 
 alias p="echo \$PATH"
 

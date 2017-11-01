@@ -57,9 +57,9 @@ ltm () {
 
 # Find matching entries in ps output
 fps(){
-    PS_OPTIONS="alwwwx"
+    PS_OPTIONS="alx"
     ps ${PS_OPTIONS} | head -1
-	ps ${PS_OPTIONS} | grep -v grep | grep -i $1
+	  ps ${PS_OPTIONS} | grep -v grep | grep -i $1
 }
 
 

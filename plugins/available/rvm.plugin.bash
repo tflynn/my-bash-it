@@ -3,10 +3,10 @@ about-plugin 'load rvm, if you are using it'
 
 # Load RVM dynamically - avoids conflcts with other package managers if only loaded on-demand
 
-rvm_on_present=$(alias | grep rvm_on | xargs)
-if [ ! "$rvm_on_present" == "" ]; then
-  unalias rvm_on
-fi
+# rvm_on_present=$(alias | grep rvm_on | xargs)
+# if [ ! "$rvm_on_present" == "" ]; then
+#   unalias rvm_on
+# fi
 
 # This should also work
 #unalias rvm_on &>/dev/null

@@ -25,6 +25,12 @@ gpull () {
   git pull --rebase origin ${active_branch}
 }
 
+gpullm () {  
+  git pull --rebase origin master
+}
+
+
+
 gpushback() {
   active_branch=`git_active_branch`
   git push -f backup ${active_branch}
