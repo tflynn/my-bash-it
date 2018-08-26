@@ -36,14 +36,9 @@ gpullm () {
   git pull $GIT_PLUGIN_REBASE_FLAG origin master
 }
 
-<<<<<<< HEAD
-=======
 gpullm () {  
   git pull --rebase origin master
 }
-
->>>>>>> Somes fixes
-
 
 gpushback() {
   active_branch=`git_active_branch`
