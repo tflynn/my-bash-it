@@ -1,6 +1,13 @@
 cite about-plugin
 about-plugin 'Additional git functions'
 
+export GIT_PLUGIN_REBASE=DISABLED
+if [ "$GIT_PLUGIN_REBASE" == "DISABLED" ]; then
+    export GIT_PLUGIN_REBASE_FLAG=""
+else
+    export GIT_PLUGIN_REBASE_FLAG="--rebase"
+fi
+
 
 git_active_branch () {
   active_branch=''
@@ -22,11 +29,11 @@ gpush(){
 #pullit () {
 gpull () {  
   active_branch=`git_active_branch`
-  git pull --rebase origin ${active_branch}
+  git pull $GIT_PLUGIN_REBASE_FLAG origin ${active_branch}
 }
 
 gpullm () {  
-  git pull --rebase origin master
+  git pull $GIT_PLUGIN_REBASE_FLAG origin master
 }
 
 
@@ -38,7 +45,7 @@ gpushback() {
 
 gpullback () {
   active_branch=`git_active_branch`
-  git pull --rebase backup ${active_branch}
+  git pull $GIT_PLUGIN_REBASE_FLAG backup ${active_branch}
 }
 
 gpushdev() {
@@ -53,12 +60,12 @@ gpushbase() {
 
 gpulldev () {
   active_branch=`git_active_branch`
-  git pull --rebase dev ${active_branch}
+  git pull $GIT_PLUGIN_REBASE_FLAG dev ${active_branch}
 }
 
 # #rebasedev() {
 # grebasebackup() {
-#   git pull --rebase origin master
+#   git pull $GIT_PLUGIN_REBASE_FLAG origin master
 # }
 
 #revert_all() {
