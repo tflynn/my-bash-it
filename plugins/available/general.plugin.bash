@@ -74,3 +74,49 @@ sha256file() {
     echo $sha256 > $sha_file
   fi
 }
+
+# Handle all startup files
+
+all_startup() {
+  if [ -z "$1" ]; then
+    action="status"
+  else
+    action=$1
+  fi
+
+  all_startup_dirs=("$BASH_IT" "$MY_BASH_IT" "$DOTFILES" "$MYBIN")
+  for startup_dir in "${all_startup_dirs[@]}"
+  do
+    pushd $startup_dir &>/dev/null
+    echo "Processing $startup_dir"
+
+    if [ $action == "status" ]; then
+      (git status | grep -q modified) &>/dev/null
+      git_status=$?
+      if [ $git_status == 0 ]; then
+        echo "$startup_dir modifications found"
+      else
+        echo "$startup_dir no changes"
+      fi
+
+    elif [ $action == "update" ]; then
+      (git status | grep -q modified) &>/dev/null
+      git_status=$?
+      if [ $git_status == 0 ]; then
+        echo "$startup_dir Can't update. Changes found"
+      else
+        echo "$startup_dir Updating ..."
+        git pull
+      fi
+    
+    else
+      echo "Unknown action $action. Skipping ..."      
+    fi
+
+    popd &>/dev/null
+
+  done
+
+}
+
+
