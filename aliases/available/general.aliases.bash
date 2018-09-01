@@ -30,4 +30,5 @@ alias rmr="rm -rf"
 
 alias lh="ls -lh"
 
+alias sub="sudo bash"
 
