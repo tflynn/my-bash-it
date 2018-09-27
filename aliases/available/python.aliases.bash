@@ -30,3 +30,6 @@ function pypa_build_wheel() {
 alias pbw="pypa_build_wheel"
 
 alias pyinit="touch __init__.py"
+
+# Nose
+alias nose="nosetests"

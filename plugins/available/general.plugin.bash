@@ -119,4 +119,7 @@ all_startup() {
 
 }
 
-
+# Which and follow_links
+function fwi() {
+  follow_links `which $1`
+}
