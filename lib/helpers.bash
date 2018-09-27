@@ -1,7 +1,7 @@
 # Helper function loading various enable-able files
 function _load_my_bash_it_files() {
   subdirectory="$1"
-  if [ -d "${MY_BASH_IT}/${subdirectory}/enabled" ]
+  if [ -d "${MY_BASH_IT}/${subdirectory}/enabled" ]; then
       FILES="${MY_BASH_IT}/${subdirectory}/enabled/*.bash"
       for config_file in $FILES
       do
