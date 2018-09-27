@@ -1,17 +1,15 @@
 # Helper function loading various enable-able files
 function _load_my_bash_it_files() {
   subdirectory="$1"
-  if [ ! -d "${MY_BASH_IT}/${subdirectory}/enabled" ]
-  then
-    continue
+  if [ -d "${MY_BASH_IT}/${subdirectory}/enabled" ]
+      FILES="${MY_BASH_IT}/${subdirectory}/enabled/*.bash"
+      for config_file in $FILES
+      do
+        if [ -e "${config_file}" ]; then
+          source $config_file
+        fi
+      done
   fi
-  FILES="${MY_BASH_IT}/${subdirectory}/enabled/*.bash"
-  for config_file in $FILES
-  do
-    if [ -e "${config_file}" ]; then
-      source $config_file
-    fi
-  done
 }
 
 # Function for reloading aliases

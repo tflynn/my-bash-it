@@ -123,3 +123,17 @@ all_startup() {
 function fwi() {
   follow_links `which $1`
 }
+
+
+# Only append to path if not present
+function path_safe_append () {
+  if ! echo "$PATH" | /bin/grep -Eq "(^|:)$1($|:)" ; then
+    if [ "$2" = "before" ] ; then
+      export PATH="$1:$PATH"
+    else
+      export PATH="$PATH:$1"
+    fi
+  fi
+}
+
+
