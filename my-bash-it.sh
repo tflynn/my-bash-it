@@ -30,6 +30,10 @@ do
   fi
 done
 
+# appearance (themes) now, after all dependencies
+# shellcheck source=./lib/appearance.bash
+source "$APPEARANCE_LIB"
+
 # Load enabled aliases, completion, plugins
 for file_type in "aliases" "completion" "plugins"
 do
