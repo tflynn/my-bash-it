@@ -4,10 +4,19 @@ about-alias 'Python aliases'
 #
 # Python
 #
-alias 2="python2"
-alias 3="python3"
+alias 1="PYENV_VERSION='system' python"
+alias 2="PYENV_VERSION='2.7.15' python"
+alias 3="PYENV_VERSION='3.6.5' python"
+alias 7="PYENV_VERSION='3.7.0' python"
+alias py="1"
 alias py2="2"
 alias py3="3"
+
+function pipf() {
+  if ! [ -z "$1" ]; then
+    pip list | grep -i "$1"
+  fi
+}
 
 function pip3f() {
   if ! [ -z "$1" ]; then
