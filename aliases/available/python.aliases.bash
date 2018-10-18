@@ -26,10 +26,10 @@ function pip3l() {
 }
 
 alias pcl="python_clean"
-alias pypa_build="python_clean; python3 setup.py install"
+alias pypa_build="python_clean && pip3 install ."
 alias pb="pypa_build"
-alias pypa_build_pip3="python_clean; pip3 install -e ."
-alias pb3="pypa_build_pip3"
+# alias pypa_build_pip3="python_clean && pip3 install -e ."
+# alias pb3="pypa_build_pip3"
 
 function pypa_build_wheel() {
   python_clean
